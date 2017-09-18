@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGourmet.Views.AdicionaisView"
+             Title="{Binding Pratos.Nome}">
+
+    <StackLayout Padding="10,0,10,0">
+        <TableView Intent="Settings">
+            <TableRoot>
+                <TableSection Title="Adicionais">
+                    <SwitchCell Text="{Binding TextoBife}" On="{Binding AdicionalBife, Mode=TwoWay}"></SwitchCell>
+                    <SwitchCell Text="{Binding TextoPresunto}" On="{Binding AdicionalPresunto, Mode=TwoWay}"></SwitchCell>
+                    <SwitchCell Text="{Binding TextoMussarela}" On="{Binding AdicionalMussarela, Mode=TwoWay}"></SwitchCell>
+                    <SwitchCell Text="{Binding TextoOvo}" On="{Binding AdicionalOvo, Mode=TwoWay}"></SwitchCell>
+                    <SwitchCell Text="{Binding TextoBacon}" On="{Binding AdicionalBacon, Mode=TwoWay}"></SwitchCell>
+                    <SwitchCell Text="{Binding TextoCheddar}" On="{Binding AdicionalCheddar, Mode=TwoWay}"></SwitchCell>
+                    <SwitchCell Text="{Binding TextoCalabresa}" On="{Binding AdicionalCalabresa, Mode=TwoWay}"></SwitchCell>
+                    <SwitchCell Text="{Binding TextoCatupiri}" On="{Binding AdicionalCatupiri, Mode=TwoWay}"></SwitchCell>
+                    <TextCell Text="{Binding ValorTotal, Mode=TwoWay}" TextColor="Blue"></TextCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+
+        <Button x:Name="ButtonAdicionarLista" 
+            Text="Adicionar a Lista"
+            Command="{Binding AdicionarListaCommand}"
+            VerticalOptions="End">
+        </Button>
+        
+    </StackLayout>
+
+</ContentPage>
+
+<!--<SwitchCell Text="{Binding TextoPresunto}" On="{Binding TemPresunto, Mode=TwoWay}">
+    </SwitchCell>
+    <SwitchCell Text="{Binding TextoMussarela}" On="{Binding TemMussarela, Mode=TwoWay}"></SwitchCell>
+    <SwitchCell Text="{Binding TextoOvo}" On="{Binding TemOvo, Mode=TwoWay}"></SwitchCell>
+    <SwitchCell Text="{Binding TextoBacon}" On="{Binding TemBacon, Mode=TwoWay}"></SwitchCell>
+    <SwitchCell Text="{Binding TextoCheddar}" On="{Binding TemCheddar, Mode=TwoWay}"></SwitchCell>
+    <SwitchCell Text="{Binding TextoCalabresa}" On="{Binding TemCalabresa, Mode=TwoWay}"></SwitchCell>
+    <SwitchCell Text="{Binding TextoCatupiri}" On="{Binding TemCatupiri, Mode=TwoWay}"></SwitchCell> -->

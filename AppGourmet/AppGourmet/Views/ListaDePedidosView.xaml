@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="AppGourmet.Views.ListaDePedidosView"
+    Title="Lista De Pedidos">
+
+    <TableView>
+        <TableRoot>
+            <TableSection Title="Dados">
+                <EntryCell Label="Nome" Keyboard="Default"></EntryCell>
+                <EntryCell Label="Endereço" Keyboard="Default"></EntryCell>
+                <EntryCell Label="Telefone" Keyboard="Numeric"></EntryCell>
+                <EntryCell Label="Email" Keyboard="Email"></EntryCell>
+            </TableSection>
+        </TableRoot>
+    </TableView>
+    
+    <ListView>
+        <ListView.ItemTemplate>
+            <!--<ViewCell>
+                <ViewCell.View>
+                    <StackLayout Orientation="Vertical" BackgroundColor="White" Margin="10">
+                        <StackLayout Orientation="Horizontal" BackgroundColor="White">
+                            <Image Source="{Binding ImageLanche}" HeightRequest="65" WidthRequest="65"></Image>
+                            <Label Text="{Binding Nome}" FontSize="20" VerticalOptions="Center" TextColor="Blue"></Label>
+                            <Label Text="  " HorizontalOptions="StartAndExpand" VerticalOptions="Center"></Label>
+                            <Label Text="{Binding PrecoFormatado}" FontAttributes="Bold" VerticalOptions="Center" TextColor="Black"></Label>
+                        </StackLayout>
+
+                        <Label Text="{Binding IngredientesPrato}"></Label>
+                        
+                    </StackLayout>
+                </ViewCell.View>
+            </ViewCell>-->
+        </ListView.ItemTemplate>
+    </ListView>
+    
+</ContentPage>
+<!--<ListView x:Name="ListViewPratos"
+                      BackgroundColor="White"
+                      ItemsSource="{Binding Pratos}"
+                      SelectedItem="{Binding PratoSelecionado}"
+                      HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Vertical" BackgroundColor="White" Margin="10">
+                                <StackLayout Orientation="Horizontal" BackgroundColor="White">
+                                    <Image Source="{Binding ImageLanche}" HeightRequest="65" WidthRequest="65"></Image>
+                                    <Label Text="{Binding Nome}" FontSize="20" VerticalOptions="Center" TextColor="Blue"></Label>
+                                    <Label Text="  " HorizontalOptions="StartAndExpand" VerticalOptions="Center"></Label>
+                                    <Label Text="{Binding PrecoFormatado}" FontAttributes="Bold" VerticalOptions="Center" TextColor="Black"></Label>
+                                </StackLayout>
+
+                                <Label Text="{Binding IngredientesPrato}"></Label>
+                                
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>-->

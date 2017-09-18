@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AppGourmet"
+             xmlns:vm="clr-namespace:AppGourmet.ViewModels"
+             Title="Lanches"
+             x:Class="AppGourmet.Views.ListagemView">
+
+    <ContentPage.BindingContext>
+        <vm:ListagemViewModel></vm:ListagemViewModel>
+    </ContentPage.BindingContext>
+
+    <ListView x:Name="ListViewPratos"
+              BackgroundColor="White"
+              ItemsSource="{Binding Pratos}"
+              SelectedItem="{Binding PratoSelecionado}"
+              HasUnevenRows="True">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <ViewCell.View>
+                        <StackLayout Orientation="Vertical" BackgroundColor="White" Margin="10">
+                            <StackLayout Orientation="Horizontal" BackgroundColor="White">
+                                <Image Source="{Binding ImageLanche}" HeightRequest="65" WidthRequest="65"></Image>
+                                <Label Text="{Binding Nome}" FontSize="20" VerticalOptions="Center" TextColor="Blue"></Label>
+                                <Label Text="  " HorizontalOptions="StartAndExpand" VerticalOptions="Center"></Label>
+                                <Label Text="{Binding PrecoFormatado}" FontAttributes="Bold" VerticalOptions="Center" TextColor="Black"></Label>
+                            </StackLayout>
+
+                            <Label Text="{Binding IngredientesPrato}"></Label>
+                            
+                        </StackLayout>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+</ContentPage>
+
+
+<!--<StackLayout Orientation="Horizontal">
+    <Label Text="Ingrediente"></Label>
+    </StackLayout> -->
+
+
+    <!--<ListView ItemsSource="{Binding PratoIngrediente}">
+                                   <ListView.ItemTemplate>
+                                       <DataTemplate>
+                                             <TextBlock Text="{Binding Ingredientes}" />
+                                       </DataTemplate>
+                                   </ListView.ItemTemplate>
+                                </ListView>-->
+                                <!--<ImageCell ImageSource="{Binding ImageLanche}" Text="{Binding Nome,PrecoFormatado}" Detail="{Binding DetailIngredientePrato}">
+                   
+                                <Image Source="{Binding ImageLanche}" HeightRequest="65" WidthRequest="65"></Image>
+                                <Label Text="{Binding Nome}" FontSize="20" VerticalOptions="Center" TextColor="Blue"></Label>
+                                <Label Text="  " HorizontalOptions="StartAndExpand" VerticalOptions="Center"></Label>
+                                <Label Text="{Binding PrecoFormatado}" FontAttributes="Bold" VerticalOptions="Center" TextColor="Black"></Label>
+                    
+                </ImageCell>-->
+
+
+                <!--<ViewCell>
+                    <ViewCell.View>
+                        <StackLayout Orientation="Vertical" BackgroundColor="White" Margin="10">
+                            <StackLayout Orientation="Horizontal" BackgroundColor="White">
+                                <Image Source="{Binding ImageLanche}" HeightRequest="65" WidthRequest="65"></Image>
+                                <Label Text="{Binding Nome}" FontSize="20" VerticalOptions="Center" TextColor="Blue"></Label>
+                                <Label Text="  " HorizontalOptions="StartAndExpand" VerticalOptions="Center"></Label>
+                                <Label Text="{Binding PrecoFormatado}" FontAttributes="Bold" VerticalOptions="Center" TextColor="Black"></Label>
+                            </StackLayout>
+
+
+                            
+                        </StackLayout>
+                    </ViewCell.View>
+                </ViewCell>-->
